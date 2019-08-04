@@ -162,6 +162,7 @@ print('{:}\t'\
       'score: {:}\t'\
       'doubled: {:}\t'\
       'bonus: {:}\t'\
+      'squares used: {:}\t'\
       'good word letters: {:}\t'\
       'bad word letters: {:}\t'\
       'all word letters: {:}\t'\
@@ -171,6 +172,7 @@ print('{:}\t'\
                    len(score['good_words']),
                    score['doubled'],
                    score['bonus'],
+                   len(filter(lambda x: x != '.', ''.join(card.layout))),
                    len(set(card.words_letters) & set(card.good_letters)),
                    len(set(card.words_letters) & set(card.bad_letters)),
                    len(card.words_letters),
